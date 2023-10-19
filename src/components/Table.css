@@ -1,0 +1,326 @@
+.table-wrapper {
+      width: 100%;
+}
+
+.table {
+      display: block;
+      overflow: hidden;
+      table-layout: fixed;
+      border-collapse: collapse;
+      box-shadow: 0px 1px 15px #252424;
+      border-radius: 10px;
+      white-space: nowrap;
+      width: 100em;
+      max-width: 80%;
+      margin: auto;
+      table-layout: auto;
+      overflow-x: auto;
+      background: #ddd;
+      padding: 10px;
+      text-align: center;
+}
+
+.table thead {
+      background-color: #dddddd;
+      color: #222;
+}
+
+.table th,
+.table td {
+      padding: 0.8rem;
+}
+
+.table td {
+      border-top: 0.5px solid #ddd;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #777;
+      font-weight: 400;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-weight: 300;
+}
+
+.table tbody {
+      background-color: #f5f5f5;
+      display: block;
+}
+
+.table tbody tr:hover {
+      background-color: #eee;
+}
+
+tbody tr.spacer td {
+      padding: 0 !important;
+      height: 10px;
+      border-radius: 0 !important;
+      background: #dddddd !important;
+}
+
+
+
+.expand {
+      width: 100%;
+}
+
+.label {
+      border-radius: 3px;
+      padding: 0.3rem;
+      color: white;
+}
+
+.label-in_progress {
+      background-color: #4d4d01;
+      background: linear-gradient(90deg, rgb(179 199 15) 0%, rgb(80 97 13) 100%);
+}
+
+.label-Finished {
+      background-color: #42a942;
+      background: linear-gradient(90deg, rgb(17 203 48) 0%, rgb(99 209 79) 100%);
+}
+
+.label-not_started {
+      background-color: #8d0c08;
+      background: linear-gradient(90deg, #e10d05 0%, rgb(153 24 54) 100%);
+}
+
+.actions {
+      display: flex;
+      justify-content: space-around;
+}
+
+.actions svg {
+      cursor: pointer;
+      background: #e1dede;
+      padding: 10px;
+      border-radius: 17px;
+      margin-right: 5px;
+      transition: all .5s ease;
+}
+
+.delete-btn {
+      color: #e10d05;
+}
+
+.actions .delete-btn:hover {
+      background: #e10d05;
+      color: #e1dede;
+
+}
+
+.actions .edit-btn:hover {
+      background: #488f1d;
+      color: #fff;
+
+}
+
+.filters.btn-group {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      margin-left: -9rem;
+      margin-bottom: 1rem;
+}
+
+
+button  {
+      min-width: 170px;
+      min-height: 40px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      /* letter-spacing: 1.3px; */
+      font-weight: 700;
+      border: none;
+      border-radius: 1000px;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px;
+}
+.toggle-btn {
+      margin-right: 1.2rem;
+      background: #4FD1C5;
+      background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+      /* box-shadow: 12px 12px 24px rgba(79, 209, 197, .64); */
+      color: #fff;
+
+
+}
+
+
+.Finished {
+      background: linear-gradient(90deg, rgb(17 203 48) 0%, rgb(99 209 79) 100%);
+}
+
+.in_progress {
+      background: linear-gradient(90deg, rgb(179 199 15)0%, rgb(80 97 13) 100%);
+}
+
+.not_started {
+      background: linear-gradient(90deg, #e10d05 0%, rgb(153 24 54) 100%);
+}
+
+[aria-pressed="false"] {
+      opacity: .7;
+}
+
+.toggle-btn ::before {
+      content: '';
+      border-radius: 1000px;
+      min-width: calc(170px + 10px);
+      min-height: calc(40px + 10px);
+      border: 6px solid #00FFCB;
+      box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-in-out 0s;
+}
+
+.in_progress ::before {
+      border: 6px solid rgb(179 199 15);
+      box-shadow: 0 0 60px rgb(80 97 13);
+}
+
+.Finished ::before {
+      border: 6px solid #33ff00;
+      box-shadow: 0 0 60px rgb(55 123 23 / 64%);
+}
+.not_started ::before{
+      border: 6px solid #bb1737;
+      box-shadow: 0 0 60px #7b0b07;
+}
+
+.toggle-btn :hover,
+.toggle-btn :focus {
+      color: #313133;
+      transform: translateY(-6px);
+}
+
+.toggle-btn :hover::before,
+.toggle-btn :focus::before {
+      opacity: 1;
+}
+
+/* button::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid #00FFCB;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+} */
+
+.toggle-btn:hover::after,
+.toggle-btn:focus::after {
+      animation: none;
+      display: none;
+}
+
+@keyframes ring {
+      0% {
+            width: 30px;
+            height: 30px;
+            opacity: 1;
+      }
+
+      100% {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+      }
+}
+
+
+/* Responsvie */
+
+@media screen and (max-width: 600px) {
+      .App {
+            display: block;
+            height: 100%;
+      }
+
+      .filters.btn-group {
+            display: block;
+            margin: auto;
+            margin-bottom: 3rem;
+            text-align: center;
+      }
+
+      .toggle-btn {
+            margin-top: 1.5rem;
+      }
+
+      .addbtn {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+
+      }
+
+      table {
+            border: 0;
+      }
+
+      table caption {
+            font-size: 1.3em;
+      }
+
+      table thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+      }
+
+      table tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: 0.15em;
+
+      }
+
+      table td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+      }
+
+
+      table td::before {
+            /*
+        * aria-label has no advantage, it won't be read inside a table
+        content: attr(aria-label);
+        */
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+      }
+
+      table td:last-child {
+            border-bottom: 0;
+      }
+      .actions{
+            display: block;
+      }
+      .logoutbtn {
+            top: 2em;
+            right: 1em;
+            padding: 1px !important;
+            min-width: 100px !important;
+      }
+}
