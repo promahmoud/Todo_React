@@ -37,7 +37,7 @@ function LoginPage(defaultValue) {
                   } 
 
                   for (const [key, value] of Object.entries(formState)) {
-                        if (key==='password' && value !== '12345' || key==='email' && value !== 'user@gmail.com') {
+                        if ((key==='password' && value !== '12345') || (key==='email' && value !== 'user@gmail.com')) {
                               errorFields = [];
                               errorFields.push("The email address or password you entered isn't connected to an account.");
                         } 
