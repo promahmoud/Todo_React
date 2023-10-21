@@ -248,7 +248,9 @@ button  {
             display: block;
             height: 100%;
       }
-
+      .screen-1 form{
+            width: 80%;
+      }
       .filters.btn-group {
             display: block;
             margin: auto;
